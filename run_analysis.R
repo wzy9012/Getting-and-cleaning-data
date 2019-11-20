@@ -51,3 +51,5 @@ library(dplyr)
 group_data <- final_data %>% 
         group_by(subject, activity) %>%
         summarise_each(mean)
+## Export the data
+write.table(group_data, "./data/Group_Data.txt", row.names = FALSE)
